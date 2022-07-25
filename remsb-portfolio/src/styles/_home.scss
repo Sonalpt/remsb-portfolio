@@ -1,0 +1,131 @@
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes menuTextHome {
+    from {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes menuTextHome {
+    from {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes menuTextList {
+    from {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes menuTextList {
+    from {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .menuTextHomeAnimation {
+    animation: menuTextHome;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+  }
+  .menuTextListAnimation {
+    animation: menuTextHome;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+  }
+  
+
+.mainContainer {
+  margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    // background-color: #111111;
+    border-radius: 5px;
+    border: 0.1rem solid #252525;
+    margin-left: 5vw;
+    .menuList {
+        width: 40vw;
+        list-style-type: none;
+        li {
+            font-size: 2.4rem;
+            font-family: "Montserrat-regular", sans-serif;
+            margin-bottom: 5rem;
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            a {
+                text-decoration: none;
+                color: white;
+                width: 75%;
+                text-align: center;
+            }
+            .redIndicator {
+                background-color: $redIndicator;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 10px;
+                animation: blink-animation 1s steps(2, start) infinite;
+                -webkit-animation: blink-animation 1s steps(2, start) infinite;
+            }
+            .redIndicatorInvisible {
+                background-color: $redIndicator;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 10px;
+                visibility: hidden;
+            }
+        }
+    }
+    .textClassHome, .textClassList {
+      
+      width: 40vw;
+      font-family: "Montserrat-Light", sans-serif;
+      font-size: 2rem;
+      position: relative;
+      bottom: 5%;
+      line-height: 1.5;
+      // opacity: 0;
+      // transform: translateY(100%);
+    }
+}
+
+.primaryText, .secondaryText {
+  animation: menuTextHome;
+      animation-duration: 1000ms;
+      animation-fill-mode: forwards;
+  opacity: 0;
+}

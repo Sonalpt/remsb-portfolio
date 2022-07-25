@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url(../policies/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../policies/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(../policies/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+$redIndicator: #ce2029;
+$projectColor: #140D28;
+
+
+@import "./navbar.scss";
+@import "./projects.scss";
+@import "./skills.scss";
+@import "./about.scss";
+@import "./languages.scss";
+@import "./home.scss";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Montserrat-Regular", sans-serif;
+    align-items: center;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.hidden {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+
+
+
