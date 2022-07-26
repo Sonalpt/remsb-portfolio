@@ -1,0 +1,124 @@
+.mainSkills {
+    display: flex;
+    flex-direction: column !important;
+    // justify-content: space-between !important;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+    border: 0.1rem solid #252525;
+    margin-left: 5vw;
+    h2 {
+        margin-top: 5%;
+        font-size: 5rem;
+        margin-bottom: 5%;
+        font-weight: 800;
+    }
+    .technologies {
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7.5%;
+        text-align: center;
+        &__html {
+            color: #F0652A;
+            &:hover {
+                background-color: #f0652a34;
+                transition: all 250ms ease;
+            }
+        }
+        &__css {
+            color: #2A65F1;
+            &:hover {
+                background-color:#2a66f134;
+                transition: all 250ms ease;
+            }
+        }
+        &__js {
+            color: #FEDA3E;
+            &:hover {
+                background-color: #fedb3e34;
+                transition: all 250ms ease;
+            }
+        }
+        &__sass {
+            color: #CB6799;
+            &:hover {
+                background-color: #cb679934;
+                transition: all 250ms ease;
+            }
+        }
+        &__react {
+            color: #62DAFC;
+            &:hover {
+                background-color: #62dbfc34;
+                transition: all 250ms ease;
+            }
+        }
+        &__node {
+            color: #669D63;
+            &:hover {
+                background-color: #669d6334;
+                transition: all 250ms ease;
+            }
+        }
+        &__mongodb {
+            color: #4B9848;
+            &:hover {
+                background-color: #4b984834;
+                transition: all 250ms ease;
+            }
+        }
+        &__mysql {
+            color: #036185;
+            &:hover {
+                background-color: #03608534;
+                transition: all 250ms ease;
+            }
+        }
+        &__vercel {
+            color: #FFFFFF;
+            &:hover {
+                background-color: #ffffff34;
+                transition: all 250ms ease;
+            }
+        }
+        &__heroku {
+            color: #41009A;
+            &:hover {
+                background-color: #40009a34;
+                transition: all 250ms ease;
+            }
+        }
+        &__git {
+            color: #F46523;
+            &:hover {
+                background-color: #f4652334;
+                transition: all 250ms ease;
+            }
+        }
+        span {
+            cursor: default;
+            background-color: black;
+            transition: all 250ms ease;
+            font-family: 'Montserrat-SemiBold', sans-serif;
+            font-size: 2rem;
+            width: 15%;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            border: 0.1rem solid #2525258f;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+    }
+}
