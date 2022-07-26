@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <>
       <main className="mainContainer mainSkills">
-        <h2>Web Development</h2>
+        <h2>Technologies</h2>
         <div className="technologies">
           <span className="technologies__html">HTML5</span>
           <span className="technologies__css">CSS3</span>
