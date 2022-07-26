@@ -8,19 +8,16 @@ const MenuText = () => {
   return (
     <>
       <div
-        className={menuText === "home" ? "textClassHome" : "textClassList"}
+        className="textClassList"
         onMouseEnter={() => {
           setMenuText("home");
         }}
       >
-        {menuText === "home" ? (
+        {menuText === "home" || menuText === "" ? (
           <>
-            <p classname="primaryText menuTextListAnimation">
-              Hello. I'm Rémy Badji. I'm your future front-end web developer, if
-              you want to.
-            </p>
-
-            <p className="secondaryText menuTextListAnimation">
+            <p className="primaryText menuTextListAnimation">
+              Hello. I'm Rémy Badji, your future front-end web developer, if you
+              want to. <br />
               This portfolio works like a DVD menu, so you can switch between
               two languages, french or english. For the rest, I let you discover
               it by yourself.{" "}
@@ -35,13 +32,13 @@ const MenuText = () => {
           </p>
         ) : menuText === "skills" ? (
           <p className="primaryText menuTextListAnimation">
-            Here, you’ll find my soft and hard skills. For hard skills, I talk
-            about my main skills, on web development, but not only.{" "}
+            Here, you’ll find my different skills in web development, and my
+            other abilities in hardware and software.{" "}
           </p>
         ) : menuText === "about" ? (
           <p className="primaryText menuTextListAnimation">
             Click on this section if you want to know more about me, like my
-            personallity, my hobbies, even my daily questionings.
+            personality, my hobbies, even my daily questionings.
           </p>
         ) : (
           <p className="primaryText menuTextListAnimation">

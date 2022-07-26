@@ -55,11 +55,13 @@
     animation: menuTextHome;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
+    opacity: 0;
   }
   .menuTextListAnimation {
     animation: menuTextHome;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
+    opacity: 0;
   }
   
 
@@ -125,7 +127,7 @@
 
 .primaryText, .secondaryText {
   animation: menuTextHome;
-      animation-duration: 1000ms;
-      animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
   opacity: 0;
 }

@@ -30,7 +30,7 @@
     height: 100vh !important;
     align-items: center;
     width: 100%;
-    background-color: rgba(36, 36, 36, 0.322);
+    background-color: rgba(36, 36, 36, 0.6);
     border-radius: 0 !important;
     &:hover {
         filter: none !important;
@@ -59,7 +59,7 @@
 }
 
 .thumbnailDetails {
-    background-color: rgba(0, 0, 0, 0.80);
+    background-color: rgba(0, 0, 0, 0.9);
     &:hover {
         filter: brightness(100%) !important;
         transition: all 250ms ease !important;
@@ -85,7 +85,8 @@
         }
         &__buttons {
             position: relative;
-            top: 10rem;
+            top: 5rem;
+            
             display: flex;
             flex-direction: row;
             width: 50%;
@@ -158,7 +159,7 @@
 }
 
 .mainContainerProjects {
-    margin-top: 0rem !important;
+    margin-top: 5rem !important;
     display: flex;
     flex-direction: row;
     width: 100vw !important;
@@ -192,9 +193,11 @@
         grid-template-rows: repeat(1, 100%);
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-        min-width: 65%;
-        width: 65%;
-        height: 85%;
+        min-width: 60%;
+        width: 60%;
+        min-height: 75%;
+        height: 75%;
+        max-height: 75%;
         border: 0.1rem solid #353535;
         border-radius: 1.5rem;
         background-color: #160E10;

@@ -1,7 +1,44 @@
 nav {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-family: "Montserrat-SemiBold", sans-serif;
     margin-left: 5rem;
-    margin-top: 2.5rem;
+    margin-right: 5rem;
+    margin-top: 3.5rem;
     margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    :nth-child(2) {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &:hover {
+            .redIndicator {
+                animation: blink-animation 1s steps(2, start) infinite;
+                -webkit-animation: blink-animation 1s steps(2, start) infinite;
+            }
+        }
+        .redIndicator {
+            background-color: $redIndicator;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 10px;
+            margin-right: 1.5rem;  
+            margin-top: 0.25rem
+        }
+        .redIndicatorInvisible {
+            background-color: $redIndicator;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 10px;
+            visibility: hidden;
+        }
+    }
 }

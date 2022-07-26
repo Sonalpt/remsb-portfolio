@@ -23,16 +23,14 @@ const App = () => {
     <>
       <NavBar />
       <MenuTextContext.Provider value={{ menuText, setMenuText }}>
-        <Router>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/*" element={<Home />} />
-            <Route path="/projects" exact element={<Projects />} />
-            <Route path="/skills" exact element={<Skills />} />
-            <Route path="/about" exact element={<About />} />
-            <Route path="/languages" exact element={<Languages />} />
-          </Routes>
-        </Router>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/*" element={<Home />} />
+          <Route path="/projects" exact element={<Projects />} />
+          <Route path="/skills" exact element={<Skills />} />
+          <Route path="/about" exact element={<About />} />
+          <Route path="/languages" exact element={<Languages />} />
+        </Routes>
       </MenuTextContext.Provider>
     </>
   );

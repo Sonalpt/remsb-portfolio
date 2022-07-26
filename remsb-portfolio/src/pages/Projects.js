@@ -50,11 +50,11 @@ const Projects = () => {
                 src="/assets/brands/logo.svg"
                 alt="Entertainement App icon"
               />
-              <h2>Entertainement app</h2>
+              <h2>Entertainment app</h2>
             </div>
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
-                <h2>Entertainement App</h2>
+                <h2>Entertainment App</h2>
                 <p>
                   This app, allows you to create an account, and search for some
                   fake movies or TV shows. You can add everything you want to
@@ -100,9 +100,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
@@ -174,9 +174,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
@@ -237,9 +237,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
@@ -300,9 +300,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
@@ -366,9 +366,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
@@ -431,9 +431,9 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="true"
+                    autoPlay="false"
                     muted="true"
-                    loop="true"
+                    loop="false"
                     controls="true"
                   >
                     <source
