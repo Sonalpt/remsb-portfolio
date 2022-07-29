@@ -7,10 +7,11 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
+import { LanguageContext } from "../helpers/LanguageContext";
 
 const MenuList = () => {
+  const { selectedLanguage } = useContext(LanguageContext);
   const { setMenuText } = useContext(MenuTextContext);
-
   const [isProjectsHover, setIsProjectsHover] = useState(false);
   const [isSkillsHover, setIsSkillsHover] = useState(false);
   const [isAboutHover, setIsAboutHover] = useState(false);
@@ -27,7 +28,12 @@ const MenuList = () => {
             setMenuText("projects");
           }}
         >
-          <Link to="/projects">Projects</Link>
+          {selectedLanguage === "english" ? (
+            <Link to="/projects">Projects</Link>
+          ) : (
+            <Link to="/projects">Projets</Link>
+          )}
+
           <div
             className={
               isProjectsHover ? "redIndicator" : "redIndicatorInvisible"
@@ -43,7 +49,11 @@ const MenuList = () => {
             setMenuText("skills");
           }}
         >
-          <Link to="/skills">Skills</Link>
+          {selectedLanguage === "english" ? (
+            <Link to="/skills">Skills</Link>
+          ) : (
+            <Link to="/skills">Compétences</Link>
+          )}
           <div
             className={isSkillsHover ? "redIndicator" : "redIndicatorInvisible"}
           ></div>
@@ -57,7 +67,12 @@ const MenuList = () => {
             setMenuText("about");
           }}
         >
-          <Link to="/about">About me</Link>
+          {selectedLanguage === "english" ? (
+            <Link to="/about">About me</Link>
+          ) : (
+            <Link to="/about">A propos</Link>
+          )}
+
           <div
             className={isAboutHover ? "redIndicator" : "redIndicatorInvisible"}
           ></div>
@@ -71,7 +86,12 @@ const MenuList = () => {
             setMenuText("language");
           }}
         >
-          <Link to="/languages">Language</Link>
+          {selectedLanguage === "english" ? (
+            <Link to="/languages">Language</Link>
+          ) : (
+            <Link to="/languages">Langue</Link>
+          )}
+
           <div
             className={
               isLanguageHover ? "redIndicator" : "redIndicatorInvisible"

@@ -81,7 +81,7 @@
         h2 {
             font-family: "Montserrat-SemiBold", sans-serif !important;
             font-size: 4rem !important;
-            margin-top: 0 !important;
+            margin-top: 5% !important;
             text-align: left !important;
             margin-bottom: 0rem;
             @media (max-width: 768px) {
@@ -91,13 +91,18 @@
             }
         }
         .textDetailsResponsive {
-            max-height: 25rem !important;
-            overflow-y: scroll !important;
+            max-height: none;
+            overflow-y: auto;
+            @media (max-width: 768px) {
+                max-height: 25rem !important;
+                overflow-y: scroll !important;
+            }
+            
         }
         p {
             text-align: justify !important;
             max-width: 95%;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-family: 'Montserrat-Light', sans-serif;
         }
         &__buttons {
@@ -105,7 +110,7 @@
             top: 5rem;
             display: flex;
             flex-direction: row;
-            width: 50%;
+            width: 100%;
             @media (max-width: 768px) {
                 width: 80%;
                 margin-bottom: 2.5rem;
