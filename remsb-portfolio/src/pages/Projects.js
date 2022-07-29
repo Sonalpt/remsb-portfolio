@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-// import entertainementVideo from "../videos/entertainement-video.mp4";
-// import groupomaniaVideo from "../videos/Groupomania-video.mp4";
-// import galleriaVideo from "../videos/Galleria-video.mp4";
-// import theplanetsVideo from "../videos/theplanets-video.mp4";
-// import ohmyfoodVideo from "../videos/ohmyfood-video.mp4";
-// import bookiVideo from "../videos/booki-video.mp4";
+import { motion } from "framer-motion";
 import {
   BrowserRouter as Router,
   Route,
@@ -29,20 +24,27 @@ const Projects = () => {
   };
 
   const onWheel = (e) => {
-    e.preventDefault();
-    const container = document.querySelector(".projectsScroll");
-    const containerScrollPosition =
-      document.querySelector(".projectsScroll").scrollLeft;
-    container.scrollTo({
-      top: 0,
-      left: containerScrollPosition + e.deltaY * 7.5,
-      behaviour: "smooth",
-    });
+    // e.preventDefault();
+    if (window.innerWidth <= 768) {
+      return;
+    } else {
+      const container = document.querySelector(".projectsScroll");
+      const containerScrollPosition =
+        document.querySelector(".projectsScroll").scrollLeft;
+      container.scrollTo({
+        top: 0,
+        left: containerScrollPosition + e.deltaY * 7.5,
+        behaviour: "smooth",
+      });
+    }
   };
 
   return (
     <>
-      <main className="mainContainer mainContainerProjects">
+      <motion.main
+        className="mainContainer mainContainerProjects"
+        exit={{ opacity: 0 }}
+      >
         <section className="projectsScroll" onWheel={onWheel}>
           <div className="project">
             <div className="thumbnail project6">
@@ -55,19 +57,24 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>Entertainment App</h2>
-                <p>
-                  This app, allows you to create an account, and search for some
-                  fake movies or TV shows. You can add everything you want to
-                  your favorites, then find it in your bookmarked shows.
-                </p>
-                <p>
-                  I did this little fullstack app during my free-time, just to
-                  revise what I've learned this year. Front-End is coded with
-                  React. Back-End is coded with NodeJS, Express, and Sequelize.
-                  The database is an SQL database, that I've managed with MySQL
-                  Workbench, on Windows OS. All of the images are stock in the
-                  front part, because I didn't wanted to invest in any service.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    This app, allows you to create an account, and search for
+                    some fake movies or TV shows. You can add everything you
+                    want to your favorites, then find it in your bookmarked
+                    shows.
+                  </p>
+                  <p>
+                    I did this little fullstack app during my free-time, just to
+                    revise what I've learned this year. Front-End is coded with
+                    React. Back-End is coded with NodeJS, Express, and
+                    Sequelize. The database is an SQL database, that I've
+                    managed with MySQL Workbench, on Windows OS. All of the
+                    images are stock in the front part, because I didn't wanted
+                    to invest in any service.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -100,10 +107,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/entertainement-video.mp4"}
@@ -124,24 +131,27 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>Groupomania</h2>
-                <p>
-                  Groupomania was my last project, provided by OpenClassrooms.
-                  This is a small social app for an enterprise. You can create
-                  your account, write some posts with/without images. See, like,
-                  and comment other people's posts.
-                </p>
-                <p>
-                  This project is a fullstack app. The front part is coded with
-                  React. Back-end is coded with NodeJS, Express, and Sequelize.
-                  The database is an SQL database, that I've managed with MySQL
-                  Workbench, on Windows OS. This app is in french, I didn't
-                  created an english version yet, so you can explore it if you
-                  can understand a little bit of french. Otherwise, just watch
-                  the video. If you see any links errors in the console, it's
-                  just because I'm using a free plan for images, so the server
-                  delete each image after a certain amount of hours. Otherwise,
-                  everything is working perfectly.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    Groupomania was my last project, provided by OpenClassrooms.
+                    This is a small social app for an enterprise. You can create
+                    your account, write some posts with/without images. See,
+                    like, and comment other people's posts.
+                  </p>
+                  <p>
+                    This project is a fullstack app. The front part is coded
+                    with React. Back-end is coded with NodeJS, Express, and
+                    Sequelize. The database is an SQL database, that I've
+                    managed with MySQL Workbench, on Windows OS. This app is in
+                    french, I didn't created an english version yet, so you can
+                    explore it if you can understand a little bit of french.
+                    Otherwise, just watch the video. If you see any links errors
+                    in the console, it's just because I'm using a free plan for
+                    images, so the server delete each image after a certain
+                    amount of hours. Otherwise, everything is working perfectly.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -174,10 +184,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/Groupomania-video.mp4"}
@@ -195,16 +205,19 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>Galleria.</h2>
-                <p>
-                  Galleria, is an art gallery slideshow project, which I'm very
-                  proud of, because it was very challenging in terms of CSS. I
-                  love the design, and the paintings, obviously.
-                </p>
-                <p>
-                  This project was coded with React, and I tried a masonry
-                  library, for the landing page. All paintings are generated
-                  dynamically through a JSON file.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    Galleria, is an art gallery slideshow project, which I'm
+                    very proud of, because it was very challenging in terms of
+                    CSS. I love the design, and the paintings, obviously.
+                  </p>
+                  <p>
+                    This project was coded with React, and I tried a masonry
+                    library, for the landing page. All paintings are generated
+                    dynamically through a JSON file.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -237,10 +250,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/Galleria-video.mp4"}
@@ -258,16 +271,19 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>THE PLANETS</h2>
-                <p>
-                  THE PLANETS, is an 8 pages planets fact site. You will learn
-                  many things on our solar system.
-                </p>
-                <p>
-                  This is my very first project using React. I did it during my
-                  free time. I wanted to work with data, to use differents
-                  methods and functions of arrays, so every elements are
-                  dynamically generated through a JSON file.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    THE PLANETS, is an 8 pages planets fact site. You will learn
+                    many things on our solar system.
+                  </p>
+                  <p>
+                    This is my very first project using React. I did it during
+                    my free time. I wanted to work with data, to use differents
+                    methods and functions of arrays, so every elements are
+                    dynamically generated through a JSON file.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -300,10 +316,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/theplanets-video.mp4"}
@@ -321,19 +337,22 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>ohmyfood</h2>
-                <p>
-                  This is the second project from OpenClassrooms. Ohmyfood, is
-                  mobile-first app, that allows you to book a table in a
-                  restaurant and choose your menu before arriving, so everything
-                  is ready when you come.
-                </p>
-                <p>
-                  So, this project is a multi-pages, mobile-first integration,
-                  with HTML and CSS. Again, no Javascript. The goal here, was to
-                  get our hands on CSS animations. And I have to admit it, I
-                  really loved it. Since I made this project, I know that I want
-                  to be a creative developer in the futur.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    This is the second project from OpenClassrooms. Ohmyfood, is
+                    mobile-first app, that allows you to book a table in a
+                    restaurant and choose your menu before arriving, so
+                    everything is ready when you come.
+                  </p>
+                  <p>
+                    So, this project is a multi-pages, mobile-first integration,
+                    with HTML and CSS. Again, no Javascript. The goal here, was
+                    to get our hands on CSS animations. And I have to admit it,
+                    I really loved it. Since I made this project, I know that I
+                    want to be a creative developer in the futur.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -366,10 +385,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/ohmyfood-video.mp4"}
@@ -387,18 +406,21 @@ const Projects = () => {
             <div className="thumbnail thumbnailDetails">
               <div className="textDetails">
                 <h2>Booki</h2>
-                <p>
-                  Booki was my first project provided by Openclassrooms's staff.
-                  Booki is a vacations app, where you can search for a hotel or
-                  a house, in a certain location.
-                </p>
-                <p>
-                  This was an integration exercise, with responsive design, in
-                  HTML and CSS. No Javascript. The goal was to test our
-                  knowledge in layout, like using flexbox, or creating tablet
-                  and mobile versions. I wanted to share this first project here
-                  because I think it's clean and cool to review.
-                </p>
+                <div className="textDetailsResponsive">
+                  <p>
+                    Booki was my first project provided by Openclassrooms's
+                    staff. Booki is a vacations app, where you can search for a
+                    hotel or a house, in a certain location.
+                  </p>
+                  <p>
+                    This was an integration exercise, with responsive design, in
+                    HTML and CSS. No Javascript. The goal was to test our
+                    knowledge in layout, like using flexbox, or creating tablet
+                    and mobile versions. I wanted to share this first project
+                    here because I think it's clean and cool to review.
+                  </p>
+                </div>
+
                 <div className="textDetails__buttons">
                   <button
                     onClick={() => {
@@ -431,10 +453,10 @@ const Projects = () => {
               >
                 <div className="videoContainer">
                   <video
-                    autoPlay="false"
-                    muted="true"
-                    loop="false"
-                    controls="true"
+                    autoPlay={true}
+                    muted={true}
+                    loop={false}
+                    controls={true}
                   >
                     <source
                       src={"/assets/videos/booki-video.mp4"}
@@ -446,7 +468,7 @@ const Projects = () => {
             ) : null}
           </div>
         </section>
-      </main>
+      </motion.main>
     </>
   );
 };

@@ -1,9 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <>
-      <main className="mainContainer mainSkills">
+      <motion.main className="mainContainer mainSkills" exit={{ opacity: 0 }}>
         <h2>Technologies</h2>
         <div className="technologies">
           <span className="technologies__html">HTML5</span>
@@ -18,7 +19,7 @@ const Skills = () => {
           <span className="technologies__heroku">Heroku</span>
           <span className="technologies__git">Git</span>
         </div>
-      </main>
+      </motion.main>
     </>
   );
 };

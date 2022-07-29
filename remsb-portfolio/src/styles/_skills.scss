@@ -1,3 +1,22 @@
+@keyframes skills-Animation {
+    0% {
+        opacity: 0;
+        transform: perspective(100px) translateZ(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(100px) translateZ(0px);
+    }
+}
+@keyframes skillsTitle-Animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .mainSkills {
     display: flex;
     flex-direction: column !important;
@@ -5,15 +24,20 @@
     margin-top: 0rem;
     display: flex;
     flex-direction: row;
-    width: 90vw;
+    width: 95vw;
     height: 80vh;
     align-items: center;
     justify-content: center;
     align-self: center;
     border-radius: 5px;
     border: 0.1rem solid #252525;
-    margin-left: 5vw;
+    @media (max-width: 768px) {}
     h2 {
+        opacity: 0;
+        animation: skillsTitle-Animation;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 500ms;
         margin-top: 5%;
         font-size: 5rem;
         margin-bottom: 5%;
@@ -23,8 +47,16 @@
         padding-right: 0.25rem;
         text-align: center;
         border-bottom: 0.1rem solid #252525;
+        @media (max-width: 768px) {
+            font-size: 3rem;
+        }
     }
     .technologies {
+        opacity: 0;
+        animation: skills-Animation;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 1000ms;
         min-width: 100%;
         display: flex;
         flex-direction: row;
@@ -33,8 +65,14 @@
         justify-content: center;
         margin-bottom: 7.5%;
         text-align: center;
+        
         &__html {
             color: #F0652A;
+            // background-color: #f0652a34 !important;
+            // animation: skills-Animation;
+            // animation-duration: 125ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 500ms;
             &:hover {
                 background-color: #f0652a34;
                 transition: all 250ms ease;
@@ -42,6 +80,11 @@
         }
         &__css {
             color: #2A65F1;
+            // background-color:#2a66f134 !important;
+            // animation: skills-Animation;
+            // animation-duration: 125ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 750ms;
             &:hover {
                 background-color:#2a66f134;
                 transition: all 250ms ease;
@@ -49,6 +92,11 @@
         }
         &__js {
             color: #FEDA3E;
+            // background-color: #fedb3e34 !important;
+            // animation: skills-Animation;
+            // animation-duration: 125ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 1000ms;
             &:hover {
                 background-color: #fedb3e34;
                 transition: all 250ms ease;
@@ -56,6 +104,11 @@
         }
         &__sass {
             color: #CB6799;
+            // background-color: #cb679934 !important;
+            // animation: skills-Animation;
+            // animation-duration: 125ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 1250ms;
             &:hover {
                 background-color: #cb679934;
                 transition: all 250ms ease;
@@ -63,6 +116,11 @@
         }
         &__react {
             color: #62DAFC;
+            // background-color: #62dbfc34 !important;
+            // animation: skills-Animation;
+            // animation-duration: 125ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 1500ms;
             &:hover {
                 background-color: #62dbfc34;
                 transition: all 250ms ease;
@@ -70,6 +128,11 @@
         }
         &__node {
             color: #669D63;
+            // background-color: #669d6334 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 1750ms;
             &:hover {
                 background-color: #669d6334;
                 transition: all 250ms ease;
@@ -77,6 +140,11 @@
         }
         &__mongodb {
             color: #4B9848;
+            // background-color: #4b984834 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 2000ms;
             &:hover {
                 background-color: #4b984834;
                 transition: all 250ms ease;
@@ -84,6 +152,11 @@
         }
         &__mysql {
             color: #036185;
+            // background-color: #03608534 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 2250ms;
             &:hover {
                 background-color: #03608534;
                 transition: all 250ms ease;
@@ -91,6 +164,11 @@
         }
         &__vercel {
             color: #FFFFFF;
+            // background-color: #ffffff34 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 2500ms;
             &:hover {
                 background-color: #ffffff34;
                 transition: all 250ms ease;
@@ -98,6 +176,11 @@
         }
         &__heroku {
             color: #41009A;
+            // background-color: #40009a34 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 2750ms;
             &:hover {
                 background-color: #40009a34;
                 transition: all 250ms ease;
@@ -105,6 +188,11 @@
         }
         &__git {
             color: #F46523;
+            // background-color: #f4652334 !important;
+            // animation: skills-Animation;
+            // animation-duration: 250ms;
+            // animation-fill-mode: forwards;
+            // animation-delay: 3000ms;
             &:hover {
                 background-color: #f4652334;
                 transition: all 250ms ease;
@@ -124,6 +212,13 @@
             border: 0.1rem solid #2525258f;
             padding: 1.5rem;
             border-radius: 1rem;
+            @media (max-width: 768px) {
+                padding: 0.5rem;
+                width: 25%;
+                font-size: 1.6rem;
+                margin-top: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
         }
     }
 }

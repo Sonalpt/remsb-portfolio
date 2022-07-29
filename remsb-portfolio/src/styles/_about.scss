@@ -1,0 +1,262 @@
+// @keyframes background_animation {
+//     0%, 100% {
+//         background: #f0652a34;
+//         transition: all 250ms ease;
+//     }
+
+//     9.09% {
+//         background: #2a66f134;
+//         transition: all 250ms ease;
+//     }
+//     18.18% {
+//         background: #fedb3e34;
+//         transition: all 250ms ease;
+//     }
+//     27.27% {
+//         background: #cb679934;
+//         transition: all 250ms ease;
+//     }
+//     36.36% {
+//         background: #62dbfc34;
+//         transition: all 250ms ease;
+//     }
+//     45.45% {
+//         background: #669d6334;
+//         transition: all 250ms ease;
+//     }
+//     54.54% {
+//         background: #4b984834;
+//         transition: all 250ms ease;
+//     }
+//     63.63% {
+//         background: #03608534;
+//         transition: all 250ms ease;
+//     }
+//     72.72% {
+//         background: #ffffff34;
+//         transition: all 250ms ease;
+//     }
+//     81.81% {
+//         background: #40009a34;
+//         transition: all 250ms ease;
+//     }
+//     90.9% {
+//         background: #f4652334;
+//         transition: all 250ms ease;
+//     }
+//     // 0% {
+//     //     background-color: yellow
+//     // }
+//     // 100% {
+//     //     background-color: red;
+//     // }
+// }
+
+@keyframes strongWords-Animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes aboutStrong-Animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes aboutText-Animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes aboutTitle-Animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mainAbout {
+    display: flex;
+    flex-direction: column !important;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+    border: 0.1rem solid #252525;
+    @media (max-width: 768px) {
+        min-height: 110rem;
+        margin-bottom: 5%;
+    }
+    h2 {
+        margin-top: 2.5%;
+        animation: aboutTitle-Animation;
+        animation-duration: 1000ms;
+        animation-delay: 3000ms;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        font-size: 5rem;
+        margin-bottom: 2.5%;
+        font-weight: 800;
+        padding-bottom: 0.5rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        text-align: center;
+        border-bottom: 0.1rem solid #252525;
+        @media (max-width: 768px) {
+            font-size: 3.5rem;
+        }
+    }
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+        border: 0.1rem solid #2525258f;
+        width: 90%;
+        height: 85%;
+        margin-bottom: 5%;
+        @media (max-width: 768px) {
+            border: none;
+            height: 100%;
+        }
+        p {
+        opacity: 0;
+        animation: aboutText-Animation;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 3500ms;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        cursor: default;
+        background-color: black;
+        transition: all 250ms ease;
+        font-family: 'Montserrat-SemiBold', sans-serif;
+        font-size: 1.6rem;
+        width: 95%;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .aboutStrong {
+            animation: aboutStrong-Animation;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+            animation-delay: 250ms;
+            opacity: 0;
+            align-self: center;
+            text-align: center;
+            font-style: italic;
+            font-size: 2.6rem;
+            border-bottom: 0.3rem solid $redIndicator;
+            border-top: 0.3rem solid $redIndicator;
+            span {
+                opacity: 0;
+            }
+            :nth-child(1) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 750ms;
+            }
+            :nth-child(2) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 1000ms;
+            }
+            :nth-child(3) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 1250ms;
+            }
+            :nth-child(4) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 1500ms;
+            }
+            :nth-child(5) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 2000ms;
+            }
+            :nth-child(6) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 2250ms;
+            }
+            :nth-child(7) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 2500ms;
+            }
+            :nth-child(8) {
+                animation: strongWords-Animation;
+                animation-fill-mode: forwards;
+                animation-duration: 500ms;
+                animation-delay: 2750ms;
+            }
+        }
+        .aboutContact {
+            opacity: 0;
+            animation: aboutText-Animation;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+            animation-delay: 3750ms;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            color: white;
+            background-color: black;
+            font-style: italic;
+            font-size: 2.3rem;
+            padding: 0.5rem;
+            margin-right: 2.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 17.5rem;
+            margin-top: 0%;
+            transition: all 250ms ease;
+            @media (max-width: 768px) {
+                font-size: 1.8rem;
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            .barHover {
+                    background-color: $redIndicator;
+                    width: 10%;
+                    height: 0.2rem;
+                    transition: all 350ms ease;
+                }
+            &:hover {
+                cursor: pointer;
+            }
+            &:hover .barHover {
+                    width: 85%;
+                    transition: all 350ms ease;
+                }
+        }
+    }
+    
+}

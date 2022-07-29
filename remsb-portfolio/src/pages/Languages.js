@@ -1,15 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Languages = () => {
   return (
     <>
-      <main className="mainLanguage">
+      <motion.main className="mainLanguage" exit={{ opacity: 0 }}>
         <h2>Choose your language</h2>
         <div className="languageButtons">
           <button>French</button>
           <button>English</button>
         </div>
-      </main>
+      </motion.main>
     </>
   );
 };
