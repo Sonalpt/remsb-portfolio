@@ -107,13 +107,21 @@ const About = () => {
           <div className="aboutContact">
             <>
               {selectedLanguage === "english" ? (
-                <a href="mailto:remsbdj@gmail.com">Contact me !</a>
+                <a className="contactLink" href="mailto:remsbdj@gmail.com">
+                  <span>Contact me !</span>
+                  <div className="barHover"></div>{" "}
+                </a>
               ) : (
-                <a href="mailto:remsbdj@gmail.com">Contactez moi !</a>
+                <a className="contactLink" href="mailto:remsbdj@gmail.com">
+                  <span>Contactez moi !</span>
+                  <div className="barHover"></div>{" "}
+                </a>
               )}
             </>
-
-            <div className="barHover"></div>
+            <a href="https://github.com/Sonalpt" className="github">
+              <span>Github</span>
+              <div className="barHover"></div>{" "}
+            </a>
           </div>
         </div>
       </motion.main>

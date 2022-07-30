@@ -24,14 +24,14 @@
     margin-top: 0rem;
     display: flex;
     flex-direction: row;
-    width: 90vw;
-    height: 80vh;
+    max-width: 95vw !important;
+    height: 80vh !important;
+    max-height: 80vh !important;
     align-items: center;
     justify-content: center;
     align-self: center;
     border-radius: 5px;
     border: 0.1rem solid #252525;
-    @media (max-width: 768px) {}
     h2 {
         opacity: 0;
         animation: skillsTitle-Animation;
@@ -47,6 +47,7 @@
         padding-right: 0.25rem;
         text-align: center;
         border-bottom: 0.1rem solid #252525;
+        
         @media (max-width: 768px) {
             font-size: 3rem;
         }
@@ -57,15 +58,14 @@
         animation-duration: 500ms;
         animation-fill-mode: forwards;
         animation-delay: 1000ms;
-        min-width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin-bottom: 7.5%;
         text-align: center;
-        
+        margin-bottom: 7.5%;
         &__html {
             color: #F0652A;
             // background-color: #f0652a34 !important;

@@ -144,6 +144,11 @@
       position: relative;
       bottom: 5%;
       line-height: 1.5;
+      @media (max-width: 768px) {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+  }   
       // opacity: 0;
       // transform: translateY(100%);
     }

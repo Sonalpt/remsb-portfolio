@@ -32,9 +32,11 @@
         padding-left: 0.25rem;
         padding-right: 0.25rem;
         @media (max-width: 768px) {
+            font-size: 3rem;
             text-align: center;
             border: none;
             margin-bottom: 10%;
+            max-width: 70%;
         }
     }
     .languageButtons {

@@ -223,8 +223,9 @@
             animation-fill-mode: forwards;
             animation-delay: 3750ms;
             display: flex;
-            flex-direction: column;
-            align-self: flex-end;
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-self: center;
             color: white;
             background-color: black;
             font-style: italic;
@@ -232,7 +233,7 @@
             padding: 0.5rem;
             margin-right: 2.5rem;
             margin-bottom: 2.5rem;
-            max-width: 20rem;
+            width: 80%;
             margin-top: 0%;
             transition: all 250ms ease;
             @media (max-width: 768px) {
@@ -243,6 +244,18 @@
                 text-decoration: none;
                 color: white;
             }
+            .contactLink {
+                &:hover .barHover {
+                    width: 85%;
+                    transition: all 350ms ease;
+                }
+            }
+            .github {
+                &:hover .barHover {
+                    width: 85%;
+                    transition: all 350ms ease;
+                }
+            }
             .barHover {
                     background-color: $redIndicator;
                     width: 10%;
@@ -252,10 +265,6 @@
             &:hover {
                 cursor: pointer;
             }
-            &:hover .barHover {
-                    width: 85%;
-                    transition: all 350ms ease;
-                }
         }
     }
     
